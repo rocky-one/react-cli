@@ -1,0 +1,31 @@
+{
+  "name": "react-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src --out-dir lib",
+    "bu": "rollup src/main.js --file lib/main.js --format cjs",
+    "watch": "npm run compile -- --watch",
+    "b": "rollup --config rollup.config.js"
+  },
+  "bin": {
+    "create-app": "./bin/www"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^11.0.0",
+    "chalk": "^4.0.0",
+    "commander": "^5.1.0",
+    "fs-extra": "^9.0.1",
+    "inquirer": "^7.1.0",
+    "ora": "^4.0.4",
+    "rollup": "^2.34.1",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
+  }
+}
