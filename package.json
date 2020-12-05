@@ -1,19 +1,8 @@
 {
-  "name": "react-web-cli",
+  "name": "react-cli",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "compile": "babel src -d dist",
-    "watch": "npm run compile -- --watch",
-    "build": ""
-  },
-  "bin": {
-    "create-app": "./package/create-app/bin/www"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-env": "^2.4.1",
@@ -22,5 +11,22 @@
     "download-git-repo": "^3.0.2",
     "inquirer": "^7.1.0",
     "ora": "^4.0.4"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "create-app": "./package/create-app/bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rocky-one/react-cli.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rocky-one/react-cli/issues"
+  },
+  "homepage": "https://github.com/rocky-one/react-cli#readme"
 }
