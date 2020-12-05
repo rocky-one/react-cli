@@ -1,0 +1,22 @@
+{
+  "name": "react-scaffold",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cross-env NODE_ENV=production node ./build/test.js",
+    "lint": "eslint ./src",
+    "dll": "node ./build/webpack.dll.config.js",
+    "dlldev": "node ./build/webpack.dlldev.config.js",
+    "dev": "cross-env NODE_ENV_APP=admin node ./build/webpack.dev.config.js",
+    "build": "node ./build/webpack.prod.config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    
+    "react": "^17.0.1"
+    
+  }
+  
+}
