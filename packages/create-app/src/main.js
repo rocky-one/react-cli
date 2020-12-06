@@ -4,7 +4,6 @@ const fs = require('fs');
 const chalk = require('chalk');
 const inquirer = require('inquirer');
 const { spawn } = require('child_process');
-const ora = require('ora');
 const initTemplate = require('./initTemplate');
 const path = require('path')
 
