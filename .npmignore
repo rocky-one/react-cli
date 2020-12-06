@@ -1,4 +1,12 @@
-/node_modules
-/packages/create-app/node_modules
-/packages/create-app/src
 .git
+.gitignore
+package.json
+package-lock.json
+
+/packages/create-app/src
+/packages/create-app/node_modules
+/packages/create-app/package-lock.json
+/packages/create-app/package.json
+/packages/create-app/.gitignore
+/packages/create-app/rollup.config.js
+/packages/create-app/yarn.lock
