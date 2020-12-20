@@ -3,9 +3,7 @@ import {
 	Link,
 } from 'react-router-dom';
 import CreateRouter from '../../router/createRouter';
-import reduceAdd from '../../utils/index';
 
-reduceAdd([]);
 export default function Page2(props: any) {
 	return (
   <div>

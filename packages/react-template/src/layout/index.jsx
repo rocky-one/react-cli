@@ -14,11 +14,11 @@ const navs = [{
   name: 'page3',
 }];
 
-function onChangeHistory(history: any, path: string) {
+function onChangeHistory(history, path) {
   history.push(path);
 }
 
-export default (props: any) => (
+export default (props) => (
   <div style={{ height: '100%', display: 'flex' }}>
     <div className={style.left}>
       {

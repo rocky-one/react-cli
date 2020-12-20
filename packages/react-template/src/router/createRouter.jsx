@@ -14,8 +14,8 @@ export default function CreateRouter(wprops) {
               path={route.path}
               render={(props) => (
                 <route.component {...wprops} {...props} routes={route.routes} />
-                        )} />
-                ))}
+                )} />
+            ))}
         </Suspense>
       </Switch>
     );

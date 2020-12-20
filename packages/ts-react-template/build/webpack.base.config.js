@@ -1,7 +1,6 @@
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
-const app = process.env.NODE_ENV_APP;
 
 function getBaseConfig(processEnv) {
 
@@ -149,8 +148,7 @@ function getBaseConfig(processEnv) {
     },
     plugins: [
       new webpack.DefinePlugin({
-        'process.env.NODE_ENV': JSON.stringify(processEnv),
-        'process.env.NODE_ENV_APP': `'${app}'`,
+        'process.env.NODE_ENV': JSON.stringify(processEnv)
       }),
       new webpack.optimize.ModuleConcatenationPlugin(),
       new MiniCssExtractPlugin({

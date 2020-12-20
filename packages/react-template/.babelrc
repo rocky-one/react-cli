@@ -1,8 +1,6 @@
 {
   "presets": [
-    [
-      "@babel/preset-env"
-    ],
+    "@babel/preset-env",
     "@babel/preset-react"
   ],
   "plugins": [
@@ -19,10 +17,7 @@
       }
     ],
     [
-      "@babel/plugin-transform-runtime",
-      {
-        "corejs": 3
-      }
+      "@babel/plugin-transform-runtime", { "corejs": 3 }
     ],
     "react-hot-loader/babel",
     "transform-react-jsx",

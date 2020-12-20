@@ -9,7 +9,6 @@ setConfig({
 });
 
 // process.env.NODE_ENV
-// process.env.NODE_ENV_APP
  
 function App(props: any) {
 	return <Layout {...props} />;

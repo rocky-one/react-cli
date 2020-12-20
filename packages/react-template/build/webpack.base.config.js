@@ -1,12 +1,11 @@
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
-const app = process.env.NODE_ENV_APP;
 
 function getBaseConfig(processEnv) {
 
   return {
-    entry: path.resolve(__dirname, '../src/index.tsx'),
+    entry: path.resolve(__dirname, '../src/index.jsx'),
     mode: processEnv,
     output: {
       path: path.resolve(__dirname, '../dist'),
@@ -15,7 +14,7 @@ function getBaseConfig(processEnv) {
       chunkFilename: 'js/[name].[chunkhash:8].js',
     },
     resolve: {
-      extensions: ['.ts', '.tsx', '.scss', '.js', '.jsx'],
+      extensions: ['.js', '.jsx', '.scss'],
       modules: [path.resolve(__dirname, '../node_modules')],
       alias: {
         react: path.resolve(__dirname, '../node_modules/react'),
@@ -132,17 +131,11 @@ function getBaseConfig(processEnv) {
           ]
         },
         {
-          test: /\.(ts|tsx)$/,
+          test: /\.(js|jsx)$/,
           exclude: /node_modules/,
           use: [
             'cache-loader',
-            'babel-loader',
-            {
-              loader: 'ts-loader',
-              options: {
-                transpileOnly: true,
-              },
-            },
+            'babel-loader'
           ],
         },
       ],
@@ -150,7 +143,6 @@ function getBaseConfig(processEnv) {
     plugins: [
       new webpack.DefinePlugin({
         'process.env.NODE_ENV': JSON.stringify(processEnv),
-        'process.env.NODE_ENV_APP': `'${app}'`,
       }),
       new webpack.optimize.ModuleConcatenationPlugin(),
       new MiniCssExtractPlugin({
